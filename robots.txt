@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://devbotman.github.io/sitemap.xml
