@@ -6,15 +6,15 @@
   <title>Devon O'Rourke — Staff TPM · Boston MA</title>
 
   <!-- SEO -->
-  <meta name="description" content="Staff Technical Program Manager with 10 years of E2E program ownership across 5G infrastructure, cloud platforms, and hardware/software systems. Open to Staff+ TPM and Associate Director roles in Boston MA and remote.">
-  <meta name="keywords" content="Staff TPM, Technical Program Manager, Boston, 5G, Telecom, Verizon, Program Management, Cloud, GCP, AWS, Agile, SAFe, Cross-functional, E2E, Remote">
+  <meta name="description" content="Staff Technical Program Manager, MBA, APM, POPM. 10+ years owning complex technical programs E2E across 5G infrastructure, cloud platforms (GCP/AWS), and hardware/software systems. Open to Staff+ TPM and Associate Director roles in Boston MA and remote.">
+  <meta name="keywords" content="Staff TPM, Technical Program Manager, Boston, 5G, Telecom, Verizon, Program Management, GCP, AWS, Agile, SAFe, AI, LLM, Python, Cross-functional, E2E, Remote, MBA">
   <meta name="author" content="Devon O'Rourke">
   <link rel="canonical" href="https://devbotman.github.io/">
 
   <!-- Open Graph -->
   <meta property="og:type"        content="profile">
-  <meta property="og:title"       content="Devon O'Rourke — Staff TPM · Boston MA">
-  <meta property="og:description" content="Staff TPM with 10 years of E2E program ownership across 5G, cloud, and hardware/software systems. Open to Staff+ and Associate Director roles.">
+  <meta property="og:title"       content="Devon O'Rourke — Staff TPM, MBA · Boston MA">
+  <meta property="og:description" content="Staff TPM with 10+ years of E2E program ownership across 5G, cloud, and hardware/software systems. $8.38B program owned. Open to Staff+ and Associate Director roles.">
   <meta property="og:url"         content="https://devbotman.github.io/">
   <meta property="og:site_name"   content="Devon O'Rourke · Portfolio">
   <meta property="profile:first_name" content="Devon">
@@ -23,7 +23,7 @@
   <!-- Twitter card -->
   <meta name="twitter:card"        content="summary">
   <meta name="twitter:title"       content="Devon O'Rourke — Staff TPM · Boston MA">
-  <meta name="twitter:description" content="Staff TPM · $8.38B program owned E2E · Open to Staff+ roles in Boston & Remote">
+  <meta name="twitter:description" content="Staff TPM · MBA, APM, POPM · $8.38B program owned E2E · Open to Staff+ roles in Boston & Remote">
 
   <!-- JSON-LD Person schema -->
   <script type="application/ld+json">
@@ -34,12 +34,17 @@
     "jobTitle": "Staff Technical Program Manager",
     "worksFor": { "@type": "Organization", "name": "Verizon" },
     "url": "https://devbotman.github.io/",
+    "email": "orourke.landry@gmail.com",
     "sameAs": [
       "https://www.linkedin.com/in/devon-orourke-pat/",
       "https://github.com/devbotman"
     ],
     "address": { "@type": "PostalAddress", "addressLocality": "Boston", "addressRegion": "MA", "addressCountry": "US" },
-    "knowsAbout": ["Technical Program Management","5G","Cloud Infrastructure","GCP","AWS","Agile","Python","AI Automation"]
+    "alumniOf": [
+      { "@type": "CollegeOrUniversity", "name": "Strayer University", "award": "MBA" },
+      { "@type": "CollegeOrUniversity", "name": "University of Massachusetts Amherst", "award": "BS Computer Systems Engineering" }
+    ],
+    "knowsAbout": ["Technical Program Management","5G","Cloud Infrastructure","GCP","AWS","Agile","SAFe","Python","AI Automation","LLM Orchestration"]
   }
   </script>
 
@@ -85,8 +90,9 @@
     .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); animation: pulse 2s infinite; flex-shrink: 0; }
     @keyframes pulse { 0%,100%{opacity:1}50%{opacity:.4} }
     .eyebrow-text { font-size: 13px; color: var(--text2); }
-    h1 { font-size: clamp(38px, 5.5vw, 62px); font-weight: 800; letter-spacing: -2px; line-height: 1.05; margin-bottom: 20px; }
+    h1 { font-size: clamp(38px, 5.5vw, 62px); font-weight: 800; letter-spacing: -2px; line-height: 1.05; margin-bottom: 12px; }
     h1 em { font-style: normal; color: var(--accent); }
+    .hero-creds { font-size: 14px; color: var(--text3); font-family: var(--mono); margin-bottom: 20px; letter-spacing: .02em; }
     .hero-sub { font-size: 17px; color: var(--text2); max-width: 520px; margin-bottom: 40px; }
     .hero-sub strong { color: var(--text); }
     .hero-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 40px; }
@@ -120,26 +126,23 @@
       transition: border-color .2s, transform .2s;
     }
     .pcard:hover { border-color: var(--accent); transform: translateY(-2px); }
-    .pcard.wip { border-color: var(--border); }
     .pcard-badge { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 3px 10px; border-radius: 20px; white-space: nowrap; align-self: start; }
     .badge-live     { background: rgba(63,185,80,.15);  color: var(--green);  border: 1px solid rgba(63,185,80,.3); }
     .badge-building { background: rgba(227,179,65,.12); color: var(--amber);  border: 1px solid rgba(227,179,65,.3); }
-    .badge-planned  { background: var(--bg3);           color: var(--text3);  border: 1px solid var(--border); }
     .pcard-icon { font-size: 28px; margin-bottom: 14px; }
     .pcard h3 { font-size: 19px; font-weight: 700; margin-bottom: 6px; }
-    .pcard p { font-size: 14px; color: var(--text2); margin-bottom: 16px; line-height: 1.5; }
+    .pcard p { font-size: 14px; color: var(--text2); margin-bottom: 12px; line-height: 1.5; }
     .pcard-tags { display: flex; flex-wrap: wrap; gap: 6px; }
     .ptag { background: var(--bg3); border-radius: 4px; padding: 2px 8px; font-size: 11px; font-family: var(--mono); color: var(--text3); }
-    .impact-bullets { margin: 10px 0 16px 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 5px; }
-    .impact-bullets li { font-size: 13px; color: var(--text2); display: flex; align-items: baseline; gap: 8px; }
-    .impact-bullets li::before { content: '→'; color: var(--accent); font-size: 11px; flex-shrink: 0; }
-    .impact-bullets strong { color: var(--text); }
+    .impact-list { margin: 10px 0 14px 0; padding: 0 0 0 16px; list-style: none; }
+    .impact-list li { font-size: 13px; color: var(--text2); margin-bottom: 5px; line-height: 1.5; padding-left: 4px; position: relative; }
+    .impact-list li::before { content: '→'; color: var(--accent); font-size: 11px; position: absolute; left: -14px; top: 2px; }
+    .impact-list strong { color: var(--text); }
 
     /* Skills */
     .skills-section { background: var(--bg2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 72px 40px; }
     .skills-inner { max-width: 860px; margin: 0 auto; }
-    .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; margin-top: 40px; }
-    .skill-group { }
+    .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 28px; margin-top: 40px; }
     .skill-group-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
     .skill-tags { display: flex; flex-wrap: wrap; gap: 6px; }
     .skill-tag { background: var(--bg3); border: 1px solid var(--border); border-radius: 6px; padding: 4px 10px; font-size: 12px; color: var(--text2); }
@@ -147,23 +150,31 @@
 
     /* Resume */
     .resume-section { max-width: 860px; margin: 0 auto; padding: 80px 40px; }
-    .resume-exp { display: flex; flex-direction: column; gap: 36px; margin-top: 40px; }
+    .resume-exp { display: flex; flex-direction: column; gap: 40px; margin-top: 40px; }
     .exp-entry { border-left: 2px solid var(--border); padding-left: 24px; position: relative; }
-    .exp-entry::before { content:''; position:absolute; left:-5px; top:6px; width:8px; height:8px; background:var(--accent); border-radius:50%; }
-    .exp-meta { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 6px; margin-bottom: 4px; }
+    .exp-entry::before { content:''; position:absolute; left:-5px; top:7px; width:8px; height:8px; background:var(--accent); border-radius:50%; }
+    .exp-meta { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 6px; margin-bottom: 2px; }
     .exp-title { font-size: 16px; font-weight: 700; color: var(--text); }
-    .exp-dates { font-size: 12px; color: var(--text3); font-family: var(--mono); }
-    .exp-company { font-size: 13px; color: var(--accent); font-weight: 600; margin-bottom: 12px; }
-    .exp-bullets { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 6px; }
-    .exp-bullets li { font-size: 14px; color: var(--text2); display: flex; gap: 10px; }
-    .exp-bullets li::before { content: '·'; color: var(--accent); font-size: 16px; line-height: 1.4; flex-shrink: 0; }
-    .exp-bullets strong { color: var(--text); }
-    .exp-placeholder { font-size: 13px; color: var(--text3); font-style: italic; margin-top: 8px; }
+    .exp-dates { font-size: 12px; color: var(--text3); font-family: var(--mono); white-space: nowrap; }
+    .exp-company { font-size: 13px; color: var(--accent); font-weight: 600; margin-bottom: 14px; }
+    /* KEY FIX: normal block layout, not flex — prevents bold text breaking mid-line */
+    .exp-bullets { list-style: none; padding: 0 0 0 16px; margin: 0; }
+    .exp-bullets li { font-size: 14px; color: var(--text2); margin-bottom: 8px; line-height: 1.6; position: relative; padding-left: 4px; }
+    .exp-bullets li::before { content: '·'; color: var(--accent); font-size: 18px; line-height: 1.2; position: absolute; left: -14px; top: 0; }
+    .exp-bullets strong { color: var(--text); font-weight: 600; }
+    .exp-bullets .bullet-label { color: var(--text); font-weight: 600; }
+
+    /* Education cards */
+    .edu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 14px; margin-top: 32px; }
+    .edu-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; }
+    .edu-degree { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 2px; }
+    .edu-school { font-size: 13px; color: var(--accent); margin-bottom: 2px; }
+    .edu-dates { font-size: 11px; color: var(--text3); font-family: var(--mono); }
+    .cert-tag { display: inline-block; background: rgba(188,140,255,.1); border: 1px solid rgba(188,140,255,.3); color: var(--purple); border-radius: 20px; padding: 3px 12px; font-size: 12px; font-weight: 600; margin: 4px 4px 0 0; }
 
     /* About */
     .about { background: var(--bg2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
     .about-inner { max-width: 860px; margin: 0 auto; padding: 80px 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
-    @media(max-width:640px){ .about-inner{grid-template-columns:1fr} .pcard{grid-template-columns:1fr} }
     .about h2 { margin-bottom: 16px; }
     .about p { font-size: 15px; color: var(--text2); margin-bottom: 14px; }
     .about p strong { color: var(--text); }
@@ -184,11 +195,13 @@
 
     @media(max-width:640px) {
       nav { padding: 0 20px; }
+      .nav-links { gap: 14px; }
       .hero { padding: 60px 20px 48px; }
       .stats { padding: 28px 20px; }
       .projects, .resume-section { padding: 60px 20px; }
-      .about-inner { padding: 60px 20px; }
+      .about-inner { padding: 60px 20px; grid-template-columns: 1fr; }
       .skills-section { padding: 60px 20px; }
+      .pcard { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -212,25 +225,23 @@
     <span class="eyebrow-text">Open to Staff+ TPM &amp; Associate Director roles · Boston MA &amp; Remote</span>
   </div>
   <h1>Devon O'Rourke<br><em>TPM &amp; Builder</em></h1>
+  <p class="hero-creds">MBA · APM · POPM · BS Computer Systems Engineering</p>
   <p class="hero-sub">
-    10 years owning complex technical programs end-to-end across <strong>5G infrastructure</strong>, <strong>cloud platforms</strong>, and <strong>hardware/software systems</strong>. I thrive in ambiguous early-stage environments and build AI tools that make the work sharper.
+    10+ years owning complex technical programs end-to-end across <strong>5G infrastructure</strong>, <strong>cloud platforms (GCP/AWS)</strong>, and <strong>hardware/software systems</strong>. I thrive in ambiguous early-stage environments and build AI tools that make the work sharper.
   </p>
   <div class="hero-chips">
     <span class="chip hi">5G / Telecom</span>
     <span class="chip hi">GCP · AWS</span>
     <span class="chip hi">E2E Program Delivery</span>
     <span class="chip hi">AI-Augmented Workflows</span>
-    <span class="chip">Python</span>
-    <span class="chip">Playwright</span>
+    <span class="chip">Python · SQL · BigQuery</span>
+    <span class="chip">Playwright · Flask</span>
     <span class="chip">LLM / Ollama</span>
-    <span class="chip">Flask</span>
-    <span class="chip">Data Engineering</span>
     <span class="chip">Agile / SAFe</span>
+    <span class="chip">JIRA · Rally</span>
   </div>
   <div class="hero-links">
-    <a href="https://www.linkedin.com/in/devon-orourke-pat/" target="_blank" class="btn btn-p">
-      View LinkedIn →
-    </a>
+    <a href="https://www.linkedin.com/in/devon-orourke-pat/" target="_blank" class="btn btn-p">View LinkedIn →</a>
     <a href="https://github.com/devbotman" target="_blank" class="btn btn-s">
       <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
       GitHub
@@ -246,7 +257,7 @@
     <div class="stat fade-in"><div class="stat-n">90K hrs</div><div class="stat-l">Engineering time recovered</div></div>
     <div class="stat fade-in"><div class="stat-n">40%</div><div class="stat-l">Deployment time reduction</div></div>
     <div class="stat fade-in"><div class="stat-n">$200M</div><div class="stat-l">Vertical opportunity identified</div></div>
-    <div class="stat fade-in"><div class="stat-n">10 yrs</div><div class="stat-l">Technical program delivery</div></div>
+    <div class="stat fade-in"><div class="stat-n">10+ yrs</div><div class="stat-l">Technical program delivery</div></div>
   </div>
 </div>
 
@@ -258,16 +269,15 @@
 
   <div class="project-grid">
 
-    <!-- TPM Command Center -->
     <a href="https://github.com/devbotman/tpm-command-center" target="_blank" class="pcard fade-in">
       <div>
         <div class="pcard-icon">🎯</div>
         <h3>TPM Command Center</h3>
-        <p>Self-hosted job search automation platform built to solve my own search problem at scale.</p>
-        <ul class="impact-bullets">
-          <li><strong>250+ ATS integrations</strong> — Greenhouse, Workday, Ashby, Lever, LinkedIn scraped daily</li>
-          <li><strong>Local LLM scoring</strong> — Ollama ranks every job against my profile without sending data to the cloud</li>
-          <li><strong>Real-time Flask dashboard</strong> — SSE-powered live updates, salary filters, deduplication</li>
+        <p>Self-hosted job search automation platform — built to solve my own search problem at scale.</p>
+        <ul class="impact-list">
+          <li><strong>250+ ATS integrations</strong> — Greenhouse, Workday, Ashby, Lever, LinkedIn scraped daily with Playwright</li>
+          <li><strong>Local LLM scoring</strong> via Ollama ranks every job against my profile without sending data to the cloud</li>
+          <li><strong>Real-time Flask dashboard</strong> with SSE-powered live updates, salary filters, and deduplication</li>
         </ul>
         <div class="pcard-tags">
           <span class="ptag">Python</span>
@@ -281,16 +291,15 @@
       <span class="pcard-badge badge-live">Live</span>
     </a>
 
-    <!-- MA Housing Tracker -->
-    <div class="pcard wip fade-in" style="cursor:default;">
+    <div class="pcard fade-in" style="cursor:default;">
       <div>
         <div class="pcard-icon">🏠</div>
         <h3>MA Housing Market Tracker</h3>
         <p>Public data pipeline + live analytics dashboard for the Massachusetts housing market.</p>
-        <ul class="impact-bullets">
-          <li><strong>Interactive heat map</strong> — county and town layers, 6 switchable data metrics</li>
-          <li><strong>4 data sources</strong> — FRED mortgage rates, Zillow ZHVI + extended datasets, MA DOR tax rates</li>
-          <li><strong>351 MA towns</strong> tracked for property tax rate trends with YoY change</li>
+        <ul class="impact-list">
+          <li><strong>Interactive heat map</strong> — county and town layers, 6 switchable metrics (price, inventory, listings, rent)</li>
+          <li><strong>4 live data sources</strong> — FRED mortgage rates, Zillow ZHVI + extended datasets, MA DOR tax rates</li>
+          <li><strong>351 MA towns</strong> tracked for property tax trends with YoY change, sortable county tables</li>
         </ul>
         <div class="pcard-tags">
           <span class="ptag">Python</span>
@@ -318,60 +327,59 @@
     <h2 class="fade-in">Skills &amp; Tools</h2>
     <div class="skills-grid">
       <div class="skill-group fade-in">
+        <div class="skill-group-title">AI &amp; Data</div>
+        <div class="skill-tags">
+          <span class="skill-tag core">LLM Prompt Engineering</span>
+          <span class="skill-tag core">Ollama / Local LLMs</span>
+          <span class="skill-tag core">AI Agent Pipelines</span>
+          <span class="skill-tag core">Python</span>
+          <span class="skill-tag core">SQL · BigQuery</span>
+          <span class="skill-tag">Claude · ChatGPT · Gemini</span>
+          <span class="skill-tag">Multi-Platform Data Integration</span>
+          <span class="skill-tag">Tableau</span>
+          <span class="skill-tag">Data Visualization</span>
+        </div>
+      </div>
+      <div class="skill-group fade-in">
         <div class="skill-group-title">Program Management</div>
         <div class="skill-tags">
           <span class="skill-tag core">E2E Program Delivery</span>
-          <span class="skill-tag core">Roadmapping</span>
-          <span class="skill-tag core">OKRs &amp; KPIs</span>
-          <span class="skill-tag core">Risk Management</span>
+          <span class="skill-tag core">Roadmapping · OKRs</span>
           <span class="skill-tag core">Stakeholder Alignment</span>
-          <span class="skill-tag">Executive Communication</span>
-          <span class="skill-tag">Cross-functional Leadership</span>
+          <span class="skill-tag core">Executive Reporting</span>
+          <span class="skill-tag core">Cross-functional Leadership</span>
+          <span class="skill-tag">Risk Management</span>
           <span class="skill-tag">Influence Without Authority</span>
-          <span class="skill-tag">P&amp;L Awareness</span>
-          <span class="skill-tag">Go-to-Market</span>
+          <span class="skill-tag">Hardware/Software Lifecycle</span>
+          <span class="skill-tag">Vendor Management</span>
         </div>
       </div>
       <div class="skill-group fade-in">
-        <div class="skill-group-title">Technical Domain</div>
+        <div class="skill-group-title">Cloud &amp; Infrastructure</div>
         <div class="skill-tags">
-          <span class="skill-tag core">5G / Telecom Infrastructure</span>
           <span class="skill-tag core">GCP</span>
           <span class="skill-tag core">AWS</span>
-          <span class="skill-tag">Hardware/Software Systems</span>
-          <span class="skill-tag">Network Engineering</span>
-          <span class="skill-tag">Cloud Platforms</span>
-          <span class="skill-tag">API Design</span>
-          <span class="skill-tag">System Architecture</span>
-          <span class="skill-tag">Data Engineering</span>
-        </div>
-      </div>
-      <div class="skill-group fade-in">
-        <div class="skill-group-title">AI &amp; Automation</div>
-        <div class="skill-tags">
-          <span class="skill-tag core">LLM Orchestration</span>
-          <span class="skill-tag core">Ollama / Local LLMs</span>
-          <span class="skill-tag core">Python</span>
-          <span class="skill-tag core">Playwright</span>
-          <span class="skill-tag">CrewAI</span>
-          <span class="skill-tag">Flask</span>
+          <span class="skill-tag core">5G NR / Telecom</span>
+          <span class="skill-tag">CI/CD Pipelines</span>
+          <span class="skill-tag">API Integration</span>
+          <span class="skill-tag">Network Architecture</span>
+          <span class="skill-tag">Splunk</span>
+          <span class="skill-tag">Flask · Playwright</span>
           <span class="skill-tag">SQLite</span>
-          <span class="skill-tag">Web Scraping</span>
-          <span class="skill-tag">Data Pipelines</span>
-          <span class="skill-tag">REST APIs</span>
         </div>
       </div>
       <div class="skill-group fade-in">
-        <div class="skill-group-title">Methodologies</div>
+        <div class="skill-group-title">Methodologies &amp; Tools</div>
         <div class="skill-tags">
-          <span class="skill-tag core">Agile</span>
-          <span class="skill-tag core">SAFe</span>
-          <span class="skill-tag">Scrum</span>
-          <span class="skill-tag">Kanban</span>
-          <span class="skill-tag">JIRA / Confluence</span>
-          <span class="skill-tag">Program Increment Planning</span>
+          <span class="skill-tag core">Agile · SAFe</span>
+          <span class="skill-tag core">JIRA · Rally</span>
+          <span class="skill-tag">Atlassian Suite</span>
+          <span class="skill-tag">Scrum · Kanban</span>
+          <span class="skill-tag">PI Planning</span>
           <span class="skill-tag">Dependency Management</span>
           <span class="skill-tag">Capacity Planning</span>
+          <span class="skill-tag">Strategic Planning</span>
+          <span class="skill-tag">Budget Ownership</span>
         </div>
       </div>
     </div>
@@ -382,65 +390,77 @@
 <div class="resume-section" id="resume">
   <div class="section-tag fade-in">Experience</div>
   <h2 class="fade-in">Resume</h2>
-  <p class="section-sub fade-in">10 years of end-to-end program ownership across infrastructure, cloud, and hardware/software systems.</p>
+  <p class="section-sub fade-in">10+ years of end-to-end program ownership across 5G infrastructure, cloud, and hardware/software systems.</p>
 
   <div class="resume-exp">
 
+    <!-- Verizon Staff TPM -->
     <div class="exp-entry fade-in">
       <div class="exp-meta">
         <span class="exp-title">Staff Technical Program Manager</span>
-        <span class="exp-dates">2020 – Present</span>
+        <span class="exp-dates">04/2020 – Present</span>
       </div>
       <div class="exp-company">Verizon · Boston, MA</div>
       <ul class="exp-bullets">
-        <li>Owned the <strong>$8.38B 5G broadband deployment program</strong> end-to-end — from concept and vendor selection through network launch — across matrixed hardware, software, and network engineering organizations</li>
-        <li>Recovered <strong>90,000+ engineering hours</strong> by identifying process bottlenecks and building AI-augmented workflow tooling adopted across the program</li>
-        <li>Reduced deployment timelines by <strong>40%</strong> through cross-functional dependency management, risk surfacing, and proactive stakeholder alignment with C-suite leadership</li>
-        <li>Identified a <strong>$200M vertical market opportunity</strong> through competitive analysis and internal capability mapping; built the business case presented to executive leadership</li>
-        <li>Led program governance across 10+ engineering teams without direct authority — built trust through clear signal, transparent tradeoff framing, and consistent delivery</li>
-        <li>Introduced AI-augmented program workflows (LLM-based summarization, automated status reporting, pipeline tooling) that reduced manual overhead and improved decision velocity</li>
+        <li><span class="bullet-label">Data Platform &amp; AI Discovery:</span> Identified a critical silent network failure affecting 40% of devices by integrating GCP, Splunk, and LLM-based analysis into a unified diagnostic view. Led remediation restoring device availability by <strong>90%</strong> on affected units. Developed installer retraining program based on root-cause findings, eliminating recurring deployment failures.</li>
+        <li><span class="bullet-label">Portfolio &amp; Strategic Leadership:</span> Owned end-to-end leadership of an <strong>$8.38B program</strong> that launched a market-disrupting 5G broadband solution. Identified and pitched a <strong>$200M vertical product opportunity</strong>, leading a pilot program to validate revenue potential.</li>
+        <li><span class="bullet-label">Process Optimization &amp; Velocity:</span> Accelerated time-to-market by removing <strong>90,000 engineering hours</strong> through process re-engineering and standardization. Established program review and prioritization cadence resulting in measurable efficiency gains and faster revenue generation.</li>
+        <li><span class="bullet-label">Cross-Functional Execution:</span> Led complex cross-functional programs managing scope, vetting new requests, and driving technical consensus to hit cost, schedule, and feature targets. Mitigated dependencies across hardware and software teams, <strong>accelerating product launch by 3 weeks</strong>.</li>
+        <li><span class="bullet-label">Internal Tooling &amp; Automation:</span> Built a commissioning file generator on GCP (BigQuery/SQL) cutting deployment time by 30 min/node (<strong>40% reduction</strong>). Developed API integration eliminating manual swivel-chair processes, saving 10+ actions/incident. Reduced redundant GCP compute costs by <strong>15%</strong> through workflow standardization.</li>
+        <li><span class="bullet-label">AI-Augmented Program Intelligence:</span> Designed and built an AI-powered agentic TPM tool using Python, Flask, and local LLMs (Ollama) to automate multi-source data aggregation, natural language analysis, and decision support — <strong>returning 5% of available bandwidth</strong> for critical work.</li>
+        <li><span class="bullet-label">Executive Communication:</span> Owned executive-level reporting on program status, risks, and solutions, ensuring alignment from engineering teams to senior leadership across a matrixed $8.38B program.</li>
       </ul>
     </div>
 
+    <!-- Network Operations Manager -->
     <div class="exp-entry fade-in">
       <div class="exp-meta">
-        <span class="exp-title">Senior Technical Program Manager</span>
-        <span class="exp-dates">2017 – 2020</span>
+        <span class="exp-title">Network Operations Manager</span>
+        <span class="exp-dates">06/2019 – 04/2020</span>
       </div>
       <div class="exp-company">Verizon · Boston, MA</div>
       <ul class="exp-bullets">
-        <li>Managed multi-quarter technical programs across cloud infrastructure and platform engineering teams</li>
-        <li>Owned program roadmaps, OKR tracking, and quarterly business reviews for product and engineering leadership</li>
-        <li>Built cross-functional alignment across hardware, software, and operations for major platform migrations</li>
+        <li>Directed and developed <strong>8 Network Engineers</strong> through trust-based leadership, regular coaching, ad-hoc discussions, and formal end-of-year performance reviews.</li>
+        <li>Activated <strong>5G NR at 2 major venues</strong> (Gillette Stadium, Xfinity Center), improving customer experience and unlocking additional revenue opportunities.</li>
       </ul>
-      <p class="exp-placeholder">↑ Update with specific details from your resume</p>
     </div>
 
+    <!-- LDP -->
     <div class="exp-entry fade-in">
       <div class="exp-meta">
-        <span class="exp-title">Earlier Experience</span>
-        <span class="exp-dates">Prior to 2017</span>
+        <span class="exp-title">Verizon Leadership Development Program</span>
+        <span class="exp-dates">06/2016 – 06/2019</span>
       </div>
-      <div class="exp-company">Technical Program &amp; Project Management</div>
+      <div class="exp-company">Verizon · Boston, MA</div>
       <ul class="exp-bullets">
-        <li>10 years of progressively senior technical program delivery across infrastructure, software, and hardware domains</li>
+        <li>Recognized as an emerging leader; developed skills across RF Design, Real Estate Management, and Fiber Operations.</li>
+        <li>Identified <strong>$400,000 in permit refund credits</strong> owed by the City of Boston to Verizon through data-driven analysis.</li>
       </ul>
-      <p class="exp-placeholder">↑ Add prior roles, companies, and key accomplishments here</p>
     </div>
 
   </div>
 
-  <!-- Education row -->
-  <div style="margin-top:48px;padding-top:32px;border-top:1px solid var(--border);" class="fade-in">
-    <div class="section-tag" style="margin-bottom:16px;">Education &amp; Certifications</div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;">
-      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:16px 20px;">
-        <div style="font-size:13px;font-weight:700;color:var(--text);margin-bottom:4px;">Bachelor's Degree</div>
-        <div style="font-size:12px;color:var(--text3);font-style:italic;">Add your degree, major, and institution</div>
+  <!-- Education & Certs -->
+  <div style="margin-top:52px;padding-top:36px;border-top:1px solid var(--border);" class="fade-in">
+    <div class="section-tag" style="margin-bottom:20px;">Education &amp; Certifications</div>
+    <div class="edu-grid">
+      <div class="edu-card">
+        <div class="edu-degree">Master of Business Administration</div>
+        <div class="edu-school">Strayer University</div>
+        <div class="edu-dates">07/2016 – 01/2019</div>
       </div>
-      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:16px 20px;">
-        <div style="font-size:13px;font-weight:700;color:var(--text);margin-bottom:4px;">Certifications</div>
-        <div style="font-size:12px;color:var(--text3);font-style:italic;">PMP, SAFe, AWS, etc. — add yours here</div>
+      <div class="edu-card">
+        <div class="edu-degree">BS Computer Systems Engineering</div>
+        <div class="edu-school">University of Massachusetts Amherst</div>
+        <div class="edu-dates">06/2012 – 05/2016</div>
+      </div>
+      <div class="edu-card">
+        <div class="edu-degree">Certifications</div>
+        <div style="margin-top:8px;">
+          <span class="cert-tag">APM</span>
+          <span class="cert-tag">POPM</span>
+          <span class="cert-tag">SAFe</span>
+        </div>
       </div>
     </div>
   </div>
@@ -452,9 +472,9 @@
     <div>
       <div class="section-tag fade-in">About</div>
       <h2 class="fade-in">Background</h2>
-      <p class="fade-in">I'm a <strong>Staff Technical Program Manager</strong> based in the Boston MA area with 10 years of end-to-end program ownership across 5G infrastructure, cloud platforms, and hardware/software systems. I've owned an <strong>$8.38B broadband program</strong> from concept through launch and thrive in the ambiguous early stages where the path forward has to be built, not followed.</p>
-      <p class="fade-in">I lead through influence, not authority. My work spans matrixed engineering organizations where getting things done means building trust, surfacing the right signal, and making complex tradeoffs visible to leadership. I rely heavily on AI and automation to multiply my own capacity and bring that same mindset to every program I run.</p>
-      <p class="fade-in">Outside of work I build tools. The projects here grew out of real problems I wanted solved.</p>
+      <p class="fade-in">I'm a <strong>Staff Technical Program Manager</strong> (MBA, APM, POPM) based in the Boston MA area with 10+ years of end-to-end program ownership across 5G infrastructure, cloud platforms, and hardware/software systems. I've owned an <strong>$8.38B broadband program</strong> from concept through launch and thrive in the ambiguous early stages where the path forward has to be built, not followed.</p>
+      <p class="fade-in">I lead through influence, not authority. My work spans matrixed engineering organizations where getting things done means building trust, surfacing the right signal, and making complex tradeoffs visible to leadership. I leverage AI and automation — LLMs, agent pipelines, data integrations — to multiply my capacity and bring that same mindset to every program I run.</p>
+      <p class="fade-in">UMass Amherst CS Engineering grad. Outside of work I build tools. The projects on this page grew out of real problems I wanted solved.</p>
     </div>
     <div class="fade-in">
       <div class="about-links">
@@ -492,7 +512,7 @@
 </div>
 
 <footer>
-  Devon O'Rourke · Staff TPM · Boston, MA ·
+  Devon O'Rourke · Staff TPM, MBA, APM, POPM · Boston, MA ·
   <a href="https://www.linkedin.com/in/devon-orourke-pat/">LinkedIn</a> ·
   <a href="https://github.com/devbotman">GitHub</a> ·
   <a href="mailto:orourke.landry@gmail.com">orourke.landry@gmail.com</a>
