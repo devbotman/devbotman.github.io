@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Devon O'Rourke — TPM & Builder</title>
+  <meta name="description" content="Distinguished Technical Program Manager. Building tools at the intersection of automation, data, and infrastructure.">
+  <style>
+    :root {
+      --bg:     #0d1117;
+      --bg2:    #161b22;
+      --bg3:    #21262d;
+      --border: #30363d;
+      --accent: #58a6ff;
+      --green:  #3fb950;
+      --purple: #bc8cff;
+      --amber:  #e3b341;
+      --text:   #e6edf3;
+      --text2:  #8b949e;
+      --text3:  #6e7681;
+      --r:      10px;
+      --mono:   'SF Mono','Fira Code',monospace;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+
+    /* Nav */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(13,17,23,0.9); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 40px; height: 56px;
+    }
+    .nav-logo { font-weight: 700; font-size: 15px; letter-spacing: -0.3px; }
+    .nav-logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 24px; }
+    .nav-links a { color: var(--text2); text-decoration: none; font-size: 14px; transition: color .2s; }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta { background: var(--accent); color: #0d1117; font-weight: 600; font-size: 13px; padding: 7px 18px; border-radius: 6px; text-decoration: none; }
+
+    /* Hero */
+    .hero { max-width: 860px; margin: 0 auto; padding: 100px 40px 72px; }
+    .hero-eyebrow { display: flex; align-items: center; gap: 10px; margin-bottom: 24px; }
+    .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); animation: pulse 2s infinite; }
+    @keyframes pulse { 0%,100%{opacity:1}50%{opacity:.4} }
+    .eyebrow-text { font-size: 13px; color: var(--text2); }
+    h1 { font-size: clamp(38px, 5.5vw, 62px); font-weight: 800; letter-spacing: -2px; line-height: 1.05; margin-bottom: 20px; }
+    h1 em { font-style: normal; color: var(--accent); }
+    .hero-sub { font-size: 17px; color: var(--text2); max-width: 520px; margin-bottom: 40px; }
+    .hero-sub strong { color: var(--text); }
+    .hero-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 40px; }
+    .chip { background: var(--bg2); border: 1px solid var(--border); border-radius: 20px; padding: 4px 14px; font-size: 12px; color: var(--text2); font-family: var(--mono); }
+    .chip.hi { border-color: var(--accent); color: var(--accent); }
+    .hero-links { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn { display: inline-flex; align-items: center; gap: 7px; padding: 10px 22px; border-radius: 8px; font-size: 14px; font-weight: 600; text-decoration: none; transition: opacity .2s, background .2s; }
+    .btn-p { background: var(--accent); color: #0d1117; }
+    .btn-p:hover { opacity: .85; }
+    .btn-s { background: var(--bg2); color: var(--text); border: 1px solid var(--border); }
+    .btn-s:hover { background: var(--bg3); }
+
+    /* Stats bar */
+    .stats { background: var(--bg2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 36px 40px; }
+    .stats-inner { max-width: 860px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 24px; }
+    .stat { text-align: center; }
+    .stat-n { font-size: 32px; font-weight: 800; letter-spacing: -1px; color: var(--accent); }
+    .stat-l { font-size: 12px; color: var(--text2); margin-top: 4px; }
+
+    /* Projects */
+    .projects { max-width: 860px; margin: 0 auto; padding: 80px 40px; }
+    .section-tag { font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--green); margin-bottom: 10px; }
+    h2 { font-size: 28px; font-weight: 800; letter-spacing: -.6px; margin-bottom: 8px; }
+    .section-sub { font-size: 15px; color: var(--text2); margin-bottom: 48px; }
+
+    .project-grid { display: grid; gap: 20px; }
+
+    .pcard {
+      background: var(--bg2); border: 1px solid var(--border); border-radius: var(--r);
+      display: grid; grid-template-columns: 1fr auto;
+      padding: 28px 32px; gap: 20px; align-items: start;
+      text-decoration: none; color: var(--text);
+      transition: border-color .2s, transform .2s;
+    }
+    .pcard:hover { border-color: var(--accent); transform: translateY(-2px); }
+    .pcard.wip { border-color: var(--border); opacity: 0.75; }
+    .pcard-badge {
+      font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
+      padding: 3px 10px; border-radius: 20px; white-space: nowrap; align-self: start;
+    }
+    .badge-live { background: rgba(63,185,80,.15); color: var(--green); border: 1px solid rgba(63,185,80,.3); }
+    .badge-building { background: rgba(227,179,65,.12); color: var(--amber); border: 1px solid rgba(227,179,65,.3); }
+    .badge-planned { background: var(--bg3); color: var(--text3); border: 1px solid var(--border); }
+    .pcard-icon { font-size: 28px; margin-bottom: 14px; }
+    .pcard h3 { font-size: 19px; font-weight: 700; margin-bottom: 6px; }
+    .pcard p { font-size: 14px; color: var(--text2); margin-bottom: 16px; line-height: 1.5; }
+    .pcard-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .ptag { background: var(--bg3); border-radius: 4px; padding: 2px 8px; font-size: 11px; font-family: var(--mono); color: var(--text3); }
+
+    /* About */
+    .about { background: var(--bg2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .about-inner { max-width: 860px; margin: 0 auto; padding: 80px 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+    @media(max-width:640px){ .about-inner{grid-template-columns:1fr} .pcard{grid-template-columns:1fr} }
+    .about h2 { margin-bottom: 16px; }
+    .about p { font-size: 15px; color: var(--text2); margin-bottom: 14px; }
+    .about p strong { color: var(--text); }
+    .about-links { display: flex; flex-direction: column; gap: 10px; }
+    .about-link {
+      display: flex; align-items: center; gap: 12px;
+      background: var(--bg3); border: 1px solid var(--border); border-radius: 8px;
+      padding: 12px 16px; text-decoration: none; color: var(--text);
+      transition: border-color .2s;
+    }
+    .about-link:hover { border-color: var(--accent); }
+    .about-link-icon { font-size: 18px; }
+    .about-link-text { font-size: 13px; font-weight: 600; }
+    .about-link-sub { font-size: 11px; color: var(--text3); }
+
+    /* Footer */
+    footer { text-align: center; padding: 36px 40px; font-size: 13px; color: var(--text3); border-top: 1px solid var(--border); }
+    footer a { color: var(--text2); text-decoration: none; }
+    footer a:hover { color: var(--text); }
+
+    .fade-in { opacity: 0; transform: translateY(16px); transition: opacity .5s, transform .5s; }
+    .fade-in.visible { opacity: 1; transform: none; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">dev<span>botman</span></div>
+  <div class="nav-links">
+    <a href="#projects">Projects</a>
+    <a href="#about">About</a>
+  </div>
+  <a href="https://www.linkedin.com/in/devonorourke/" target="_blank" class="nav-cta">LinkedIn →</a>
+</nav>
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-eyebrow">
+    <div class="dot"></div>
+    <span class="eyebrow-text">Distinguished TPM · Open to Staff+ roles in Boston MA &amp; Remote</span>
+  </div>
+  <h1>Devon O'Rourke<br><em>TPM &amp; Builder</em></h1>
+  <p class="hero-sub">
+    10 years delivering <strong>5G infrastructure</strong>, <strong>cloud platform programs</strong>, and
+    <strong>hardware/software systems</strong> at scale. I also build the tools that make my work better.
+  </p>
+  <div class="hero-chips">
+    <span class="chip hi">5G / Telecom</span>
+    <span class="chip hi">GCP · AWS</span>
+    <span class="chip hi">E2E Program Delivery</span>
+    <span class="chip">Python</span>
+    <span class="chip">Playwright</span>
+    <span class="chip">LLM / AI</span>
+    <span class="chip">Flask</span>
+    <span class="chip">Data Engineering</span>
+    <span class="chip">Agile / SAFe</span>
+  </div>
+  <div class="hero-links">
+    <a href="https://www.linkedin.com/in/devonorourke/" target="_blank" class="btn btn-p">
+      View LinkedIn →
+    </a>
+    <a href="https://github.com/devbotman" target="_blank" class="btn btn-s">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+      GitHub
+    </a>
+    <a href="mailto:orourke.landry@gmail.com" class="btn btn-s">orourke.landry@gmail.com</a>
+  </div>
+</div>
+
+<!-- Stats -->
+<div class="stats">
+  <div class="stats-inner">
+    <div class="stat fade-in"><div class="stat-n">$8.38M</div><div class="stat-l">Program budget owned E2E</div></div>
+    <div class="stat fade-in"><div class="stat-n">90K hrs</div><div class="stat-l">Engineering time recovered</div></div>
+    <div class="stat fade-in"><div class="stat-n">40%</div><div class="stat-l">Deployment time reduction</div></div>
+    <div class="stat fade-in"><div class="stat-n">$200M</div><div class="stat-l">Vertical opportunity identified</div></div>
+    <div class="stat fade-in"><div class="stat-n">10 yrs</div><div class="stat-l">Technical program delivery</div></div>
+  </div>
+</div>
+
+<!-- Projects -->
+<div class="projects" id="projects">
+  <div class="section-tag fade-in">Projects</div>
+  <h2 class="fade-in">Things I've built</h2>
+  <p class="section-sub fade-in">Open-source tools at the intersection of automation, data, and program management.</p>
+
+  <div class="project-grid">
+
+    <!-- TPM Command Center -->
+    <a href="https://github.com/devbotman/tpm-command-center" target="_blank" class="pcard fade-in">
+      <div>
+        <div class="pcard-icon">🎯</div>
+        <h3>TPM Command Center</h3>
+        <p>Self-hosted job search automation platform. Scrapes 250+ company ATS boards (Greenhouse, Workday, Ashby, Lever, LinkedIn), scores jobs with a local LLM, and surfaces ranked matches in a real-time Flask dashboard — no subscriptions or API keys required.</p>
+        <div class="pcard-tags">
+          <span class="ptag">Python</span>
+          <span class="ptag">Playwright</span>
+          <span class="ptag">Flask + SSE</span>
+          <span class="ptag">Ollama</span>
+          <span class="ptag">SQLite</span>
+          <span class="ptag">CrewAI</span>
+        </div>
+      </div>
+      <span class="pcard-badge badge-live">Live</span>
+    </a>
+
+    <!-- MA Housing Tracker -->
+    <a href="https://github.com/devbotman/ma-housing-tracker" target="_blank" class="pcard wip fade-in">
+      <div>
+        <div class="pcard-icon">🏠</div>
+        <h3>MA Housing Market Tracker</h3>
+        <p>Real-time housing market analytics dashboard. Tracks median sale prices by MA town and county, property tax trends with YoY changes, 30/15yr mortgage and refinance rates over the last 60 days, and national price trends by state — all from public data sources.</p>
+        <div class="pcard-tags">
+          <span class="ptag">Python</span>
+          <span class="ptag">FRED API</span>
+          <span class="ptag">Zillow Data</span>
+          <span class="ptag">Pandas</span>
+          <span class="ptag">Chart.js</span>
+          <span class="ptag">SQLite</span>
+        </div>
+      </div>
+      <span class="pcard-badge badge-building">Building</span>
+    </a>
+
+  </div>
+</div>
+
+<!-- About -->
+<div class="about" id="about">
+  <div class="about-inner">
+    <div>
+      <div class="section-tag fade-in">About</div>
+      <h2 class="fade-in">Background</h2>
+      <p class="fade-in">I'm a <strong>Distinguished Technical Program Manager</strong> at Verizon, based in the Boston MA area. I've spent 10 years delivering complex technical programs — from <strong>5G NR deployments at Gillette Stadium</strong> to owning an <strong>$8.38M broadband infrastructure program</strong> end-to-end.</p>
+      <p class="fade-in">My technical background spans <strong>GCP/AWS cloud infrastructure</strong>, network engineering, hardware/software development lifecycles, and building internal tooling with Python and SQL. I care about removing friction from engineering teams — whether that's 90,000 hours of process waste or a 40% reduction in deployment time.</p>
+      <p class="fade-in">Outside of work I build tools. The projects here grew out of real problems I wanted solved.</p>
+    </div>
+    <div class="fade-in">
+      <div class="about-links">
+        <a href="https://www.linkedin.com/in/devonorourke/" target="_blank" class="about-link">
+          <span class="about-link-icon">💼</span>
+          <div>
+            <div class="about-link-text">LinkedIn</div>
+            <div class="about-link-sub">linkedin.com/in/devonorourke</div>
+          </div>
+        </a>
+        <a href="https://github.com/devbotman/tpm-command-center" target="_blank" class="about-link">
+          <span class="about-link-icon">🎯</span>
+          <div>
+            <div class="about-link-text">TPM Command Center</div>
+            <div class="about-link-sub">Job search automation · 250+ ATS scrapers</div>
+          </div>
+        </a>
+        <a href="https://github.com/devbotman/ma-housing-tracker" target="_blank" class="about-link">
+          <span class="about-link-icon">🏠</span>
+          <div>
+            <div class="about-link-text">MA Housing Tracker</div>
+            <div class="about-link-sub">Housing market analytics · In progress</div>
+          </div>
+        </a>
+        <a href="mailto:orourke.landry@gmail.com" class="about-link">
+          <span class="about-link-icon">✉️</span>
+          <div>
+            <div class="about-link-text">Get in touch</div>
+            <div class="about-link-sub">orourke.landry@gmail.com</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  Devon O'Rourke · Distinguished TPM · Boston, MA ·
+  <a href="https://www.linkedin.com/in/devonorourke/">LinkedIn</a> ·
+  <a href="https://github.com/devbotman">GitHub</a>
+</footer>
+
+<script>
+  const obs = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); }), {threshold:0.08});
+  document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
